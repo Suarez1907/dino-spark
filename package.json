@@ -1,0 +1,17 @@
+{
+  "name": "dino-kazi-istanbul",
+  "version": "1.0.0",
+  "description": "İstanbul Boğazı atmosferinde gerçekçi 3D dinozor kazı ve keşif oyunu (Three.js + Capacitor Android)",
+  "private": true,
+  "scripts": {
+    "cap:add": "npx cap add android",
+    "cap:sync": "npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/cli": "^6.1.2"
+  }
+}

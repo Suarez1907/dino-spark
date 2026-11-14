@@ -1,0 +1,10 @@
+{
+  "appId": "com.suarez1907.dinokaziistanbul",
+  "appName": "Dino Kazı: İstanbul",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true,
+    "backgroundColor": "#0c141c"
+  }
+}

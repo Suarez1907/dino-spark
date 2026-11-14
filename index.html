@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Dino Kazı: İstanbul</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="loader-card">
+      <div class="loader-badge">İSTANBUL BOĞAZI • PALEONTOLOJİ SEFERİ</div>
+      <h1>DİNO KAZI: İSTANBUL</h1>
+      <p id="loading-status">3D PBR Arazi ve Boğaz Atmosferi Yükleniyor...</p>
+      <div class="progress-track"><div id="loading-bar"></div></div>
+    </div>
+  </div>
+
+  <canvas id="game-canvas"></canvas>
+
+  <!-- Top HUD -->
+  <header id="hud-top">
+    <div class="hud-pill brand-pill">
+      <span class="dot-live"></span>
+      <div>
+        <div class="hud-title">DİNO KAZI: İSTANBUL</div>
+        <div class="hud-sub" id="location-label">Sarıyer Kireçtaşı Kıyısı</div>
+      </div>
+    </div>
+
+    <div class="hud-controls">
+      <button class="hud-btn" id="btn-time" title="Günün Saati">☀ Altın Saat</button>
+      <button class="hud-btn" id="btn-quality" title="Grafik Kalitesi">⚙ Ultra PBR</button>
+      <button class="hud-btn accent" id="btn-guide">🦖 Rehber (<span id="found-count">0</span>/3)</button>
+    </div>
+  </header>
+
+  <!-- Compass / Nearest Site Indicator -->
+  <div id="site-radar">
+    <span id="radar-text">En yakın kazı alanına yaklaşın</span>
+    <div class="dig-progress-wrap" id="dig-progress-wrap">
+      <div id="dig-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- Touch Controls -->
+  <div id="touch-controls">
+    <div id="joystick-zone">
+      <div id="joystick-base">
+        <div id="joystick-knob"></div>
+      </div>
+    </div>
+
+    <div id="action-zone">
+      <button id="btn-dig" class="action-btn" disabled>
+        <span class="btn-icon">⛏</span>
+        <span class="btn-label">KAZI YAP</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="desktop-hint">WASD / Oklar: Sürüş • Fare Sürükle: Kamera • Boşluk: Kazı Yap</div>
+
+  <!-- Dino Field Card Modal -->
+  <div id="card-modal" class="modal hidden">
+    <div class="modal-backdrop" id="modal-close-bg"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="btn-modal-close">✕</button>
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="Dinozor" />
+        <span class="modal-tag" id="modal-tag">KEŞFEDİLDİ</span>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-title">Tyrannosaurus Rex</h2>
+        <div class="modal-meta" id="modal-meta">Geç Kretase • Etçil • 12m</div>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guide List Modal -->
+  <div id="guide-modal" class="modal hidden">
+    <div class="modal-backdrop" id="guide-close-bg"></div>
+    <div class="modal-card guide-card">
+      <button class="modal-close" id="btn-guide-close">✕</button>
+      <h2>İstanbul Fosil Saha Rehberi</h2>
+      <p class="guide-sub">Boğaz kıyısındaki 3 kazı noktasını keşfederek dinozorları uyandırın.</p>
+      <div id="guide-list" class="guide-list"></div>
+    </div>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
